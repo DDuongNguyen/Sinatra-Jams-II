@@ -2,7 +2,7 @@ Artist.destroy_all
 Instrument.destroy_all
 Jamster.destroy_all
 
-30.times do
+10.times do
   Artist.create(name: Faker::TvShows::RuPaul.queen, age: rand(10..100), bio: Faker::Hipster.sentence)
 end
 
@@ -11,7 +11,7 @@ end
 end
 
 10.times do
-  Jamster.create(name: Faker::FunnyName.three_word_name, artist_id: rand(1..30), instrument_id: rand(1..30))
+  Jamster.create(name: Faker::FunnyName.three_word_name, artist_id: rand(1..10), instrument_id: rand(1..10))
 end
 
 puts "File has been seeded! 🍀"

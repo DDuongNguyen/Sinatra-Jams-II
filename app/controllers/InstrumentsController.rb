@@ -1,4 +1,4 @@
-class InstrumentController <ApplicationController
+class InstrumentsController <ApplicationController
 
     get '/instruments' do
       @instruments= Instrument.all
@@ -7,7 +7,9 @@ class InstrumentController <ApplicationController
 
     get '/instrument/:id' do
       @instrument= Instrument.find_by(id: params[:id])
-      @artist_play=
+      binding.pry
+      # @artist_instrument = Jamster.find_by(id:params[:artist_id])
+
       # binding.pry
         erb :"instruments/show"
       end
