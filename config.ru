@@ -6,4 +6,6 @@ end
 
 use Rack::MethodOverride
 use ArtistsController
+use JamstersController
+use InstrumentController
 run ApplicationController

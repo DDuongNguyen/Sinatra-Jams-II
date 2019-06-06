@@ -1,12 +1,17 @@
 Artist.destroy_all
 Instrument.destroy_all
+Jamster.destroy_all
 
-10.times do
-  Artist.create(name: Faker::Name.name, age: rand(1..100), bio: Faker::Hipster.sentence)
+30.times do
+  Artist.create(name: Faker::TvShows::RuPaul.queen, age: rand(10..100), bio: Faker::Hipster.sentence)
 end
 
-5.times do
-  Instrument.create(name: Faker::Music.instrument, brand: Faker::Company.name)
+30.times do
+  Instrument.create(name: Faker::Music.instrument, brand: Faker::Movies::HarryPotter.spell, year: rand(1500..2019))
+end
+
+10.times do
+  Jamster.create(name: Faker::FunnyName.three_word_name, artist_id: rand(1..30), instrument_id: rand(1..30))
 end
 
 puts "File has been seeded! 🍀"

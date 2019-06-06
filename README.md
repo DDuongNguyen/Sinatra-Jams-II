@@ -9,9 +9,17 @@ At this point, you should be considering the relationship between an `Artist` in
 
 In recording the instruments in the database, Jams Inc. would like to see the following deliverables implemented:
 
-* A database of `Instrument`s that will allow for a `name` string and a `brand` string. If you create your database properly, you should be able to seed your database with the given `seeds.rb` file.
+<!-- * A database of `Instrument`s that will allow for a `name` string and a `brand` string. If you create your database properly, you should be able to seed your database with the given `seeds.rb` file. -->
 
-* A feature to keep track of which artists play which instruments. This feature should be designed with the intention to keep the Single Source of Truth in regards to their relationship intact, which means you may need to alter your database somehow. Where should this relationship live?
+* A feature to keep track of which artists play which instruments.
+
+
+/artists/:id
+info about that artist
+AND what instrument he plays
+
+
+This feature should be designed with the intention to keep the Single Source of Truth in regards to their relationship intact, which means you may need to alter your database somehow. Where should this relationship live?
 
   * After you figure out a way to keep track of which artists play which instruments, alter the `seeds.rb` file so that some artists and instruments are related. Implement this however way it makes sense to you, but make sure that you checkout your relationships in  `rake console`.
 

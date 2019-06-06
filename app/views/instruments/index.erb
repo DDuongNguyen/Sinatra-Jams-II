@@ -1,0 +1,14 @@
+<h1>TIS INSTRUMENTS</h1>
+<center>
+
+
+<ul>
+  <%@instruments.each do |instrument| %>
+    <a href="/instrument/<%=instrument.id%>"><%= instrument.name %></a>
+    <br>
+    <img src="https://media3.giphy.com/media/3o6gaUTnzNKwPLbf6o/giphy.gif" alt="" width="150" height="100">
+    <br>
+  <%end%>
+  </ul>
+
+</center>

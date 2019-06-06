@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  
+
   get "/artists" do
     @artists = Artist.all
     erb :'artists/index'
@@ -10,8 +10,10 @@ class ArtistsController < ApplicationController
     erb :'artists/new'
   end
 
+
   get "/artists/:id" do
     @artist = Artist.find(params[:id])
+    # binding.pry
     erb :'artists/show'
   end
 

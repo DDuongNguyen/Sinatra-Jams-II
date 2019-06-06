@@ -1,11 +1,15 @@
 <h1>This is the index page of artists!</h1>
-
-<ul>
-  <% @artists.each do |artist| %>
-    <li>
+<center>
+  <ul>
+    <% @artists.each do |artist| %>
+    <h5>
       <a href="/artists/<%= artist.id %>">
         <%= artist.name %>
       </a>
-    </li>
-  <% end %>
-</ul>
+      <br>
+      <img src="https://i.pinimg.com/originals/a0/6d/9c/a06d9c486457de169d3146224447a40f.gif" alt="" width="200" height="150">
+    </h5>
+    <% end %>
+  </ul>
+
+  </center>

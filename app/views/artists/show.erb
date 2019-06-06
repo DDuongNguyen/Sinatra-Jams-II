@@ -1,7 +1,25 @@
-<h1>Welcome to <%= @artist.name %>'s page! </h1>
-<p>Age: <%= @artist.age %> </p>
-<p>Bio: <%= @artist.bio %> </p>
+<h1>Welcome to
+  <%= @artist.name %>'s page!
+</h1>
+<p>Age:
+  <%= @artist.age %>
+</p>
+<p>Bio:
+  <%= @artist.bio %>
+</p>
 
-<a href="/artists/<%= @artist.id %>/edit">Edit <%= @artist.name %>'s information.</a>
+<p>Instruments this Motherlover can play:
+  <%= @artist.instruments.count %>
+  <ol>
+    <% @artist.instruments.each do |instrument|%>
+      <li>
+        <%= instrument.name %>
+      </li>
+    <% end  %>
+  </ol>
+</p>
+
+<a href="/artists/<%= @artist.id %>/edit">Edit
+  <%= @artist.name %>'s information.</a>
 <br/>
 <a href="/artists">Back to the list of artists.</a>
